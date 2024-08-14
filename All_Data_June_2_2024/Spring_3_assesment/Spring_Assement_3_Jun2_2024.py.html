@@ -1,0 +1,229 @@
+<html>
+<head>
+<title>Spring_Assement_3_Jun2_2024.py</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<style type="text/css">
+.s0 { color: #7a7e85;}
+.s1 { color: #bcbec4;}
+.s2 { color: #5f826b; font-style: italic;}
+.s3 { color: #cf8e6d;}
+.s4 { color: #bcbec4;}
+.s5 { color: #6aab73;}
+.s6 { color: #2aacb8;}
+</style>
+</head>
+<body bgcolor="#1e1f22">
+<table CELLSPACING=0 CELLPADDING=5 COLS=1 WIDTH="100%" BGCOLOR="#606060" >
+<tr><td><center>
+<font face="Arial, Helvetica" color="#000000">
+Spring_Assement_3_Jun2_2024.py</font>
+</center></td></tr></table>
+<pre><span class="s0">###### This is spring assement 3 at Masterschool in software engineering 8 month training program, Berlin ############</span>
+<span class="s0">###### Bio's of the candidate tarinee: </span>
+<span class="s0"># Asmamaw Cahnie Yehun, completed his Ms.c in satellite Geodesy in 2013 and PhD in atmospheric Physics in 2021.</span>
+<span class="s0"># contact: chanieasmamaw@yahoo.com or yehunchanieasmamaw@gmail.com</span>
+<span class="s0"># phone:+4917625315666</span>
+<span class="s0"># current address: Mülheim am Main, Germany</span>
+<span class="s0">#########################################  Qestion 1 ###################################################################</span>
+<span class="s0">#def questions()</span>
+<span class="s2">&quot;&quot;&quot; 
+    Write a function called extract_area_code. 
+The function will expect one parameter: phone_number, a string containing a phone number in the format “(XXX) YYY-ZZZZ&quot;. 
+The function will return a new string containing the extracted area code. 
+    :return: 
+&quot;&quot;&quot;</span>
+<span class="s3">def </span><span class="s1">extract_area_code</span><span class="s4">(</span><span class="s1">phone_number</span><span class="s4">):</span>
+    <span class="s0"># Check  format (like (XXX) YYY-ZZZZ)</span>
+    <span class="s3">if </span><span class="s1">phone_number</span><span class="s4">.</span><span class="s1">startswith</span><span class="s4">(</span><span class="s5">&quot;(&quot;</span><span class="s4">) </span><span class="s3">and </span><span class="s5">&quot;)&quot; </span><span class="s3">in </span><span class="s1">phone_number</span><span class="s4">:</span>
+        <span class="s1">start_index </span><span class="s4">= </span><span class="s1">phone_number</span><span class="s4">.</span><span class="s1">index</span><span class="s4">(</span><span class="s5">&quot;(&quot;</span><span class="s4">) + </span><span class="s6">1</span>
+        <span class="s1">end_index </span><span class="s4">= </span><span class="s1">phone_number</span><span class="s4">.</span><span class="s1">index</span><span class="s4">(</span><span class="s5">&quot;)&quot;</span><span class="s4">)</span>
+        <span class="s1">area_code </span><span class="s4">= </span><span class="s1">phone_number</span><span class="s4">[</span><span class="s1">start_index</span><span class="s4">:</span><span class="s1">end_index</span><span class="s4">]</span>
+        <span class="s3">return </span><span class="s1">area_code</span>
+    <span class="s3">else</span><span class="s4">:</span>
+        <span class="s3">return </span><span class="s5">&quot;Invalid input&quot;</span>
+
+<span class="s1">result </span><span class="s4">= </span><span class="s1">extract_area_code</span><span class="s4">(</span><span class="s5">&quot;(120)-176-253-15666&quot;</span><span class="s4">)</span>
+<span class="s1">print</span><span class="s4">(</span><span class="s1">result</span><span class="s4">)  </span><span class="s0"># Should print (xxx)</span>
+
+<span class="s0">#########################################  Qestion 2 ###################################################################</span>
+<span class="s5">&quot;&quot;&quot; 
+Write a function called duplicate_last_item. The function will expect one parameter: a list with unknown elements. 
+The function will add a copy of the last item to the end of the list, and return the updated list. 
+&quot;&quot;&quot;</span>
+<span class="s3">def </span><span class="s1">duplicate_last_item</span><span class="s4">(</span><span class="s1">list_item</span><span class="s4">):</span>
+    <span class="s3">if not </span><span class="s1">list_item</span><span class="s4">:</span>
+        <span class="s3">return </span><span class="s1">list_item</span>
+    <span class="s1">list_item</span><span class="s4">.</span><span class="s1">append</span><span class="s4">(</span><span class="s1">list_item</span><span class="s4">[-</span><span class="s6">1</span><span class="s4">])</span>
+    <span class="s3">return </span><span class="s1">list_item</span>
+<span class="s1">result </span><span class="s4">= </span><span class="s1">duplicate_last_item</span><span class="s4">([</span><span class="s5">&quot;A&quot;</span><span class="s4">, </span><span class="s6">2</span><span class="s4">, </span><span class="s5">&quot;A&quot;</span><span class="s4">, </span><span class="s5">&quot;B&quot;</span><span class="s4">, </span><span class="s5">&quot;C&quot;</span><span class="s4">, </span><span class="s5">&quot;D&quot;</span><span class="s4">, </span><span class="s5">&quot;E&quot;</span><span class="s4">, </span><span class="s5">&quot;F&quot;</span><span class="s4">, </span><span class="s5">&quot;G&quot;</span><span class="s4">, </span><span class="s5">&quot;H&quot;</span><span class="s4">])</span>
+<span class="s1">print</span><span class="s4">(</span><span class="s1">result</span><span class="s4">)</span>
+<span class="s0">#########################################  Qestion 3 ###################################################################</span>
+
+<span class="s5">&quot;&quot;&quot; 
+In a certain country, only items that cost more than $100 are taxed. The tax rate is 15%. 
+Write a function called add_tax.  
+The function will expect one parameter - price (float) - the price of an item in dollars. 
+The function will return the full price, including taxes, if applied (float). 
+&quot;&quot;&quot;</span>
+<span class="s1">tax_free_threshold </span><span class="s4">= </span><span class="s6">100</span>
+<span class="s1">tax_rate</span><span class="s4">=</span><span class="s6">0.15</span>
+<span class="s3">def </span><span class="s1">add_tax</span><span class="s4">(</span><span class="s1">price</span><span class="s4">) </span><span class="s1">-&gt; float</span><span class="s4">:</span>
+    <span class="s1">price </span><span class="s4">= </span><span class="s1">float</span><span class="s4">(</span><span class="s1">price</span><span class="s4">)  </span><span class="s0"># Convert price to float</span>
+    <span class="s3">if </span><span class="s1">price </span><span class="s4">&lt; </span><span class="s1">tax_free_threshold</span><span class="s4">:</span>
+        <span class="s3">return </span><span class="s1">price  </span><span class="s0"># Tax-free</span>
+    <span class="s3">else</span><span class="s4">:</span>
+        <span class="s3">return </span><span class="s1">price </span><span class="s4">+ (</span><span class="s1">price </span><span class="s4">* </span><span class="s1">tax_rate</span><span class="s4">)</span>
+
+<span class="s0"># Ensure both arguments are provided</span>
+<span class="s1">result </span><span class="s4">= </span><span class="s1">add_tax</span><span class="s4">(</span><span class="s6">120</span><span class="s4">)</span>
+<span class="s1">print</span><span class="s4">(</span><span class="s5">f&quot;The final price after tax is: </span><span class="s3">{</span><span class="s1">result</span><span class="s3">:</span><span class="s5">.2f</span><span class="s3">} </span><span class="s5">$&quot;</span><span class="s4">)</span>
+
+<span class="s0"># Another example with a price below the threshold</span>
+<span class="s1">result2 </span><span class="s4">= </span><span class="s1">add_tax</span><span class="s4">(</span><span class="s6">10</span><span class="s4">)</span>
+<span class="s1">print</span><span class="s4">(</span><span class="s5">f&quot;The final price after tax is: </span><span class="s3">{</span><span class="s1">result2</span><span class="s3">:</span><span class="s5">.2f</span><span class="s3">} </span><span class="s5">$&quot;</span><span class="s4">)</span>
+
+<span class="s0">#########################################  Qestion 4 ###################################################################</span>
+<span class="s5">&quot;&quot;&quot; 
+Write a function called count_first_letter. 
+The function will expect one parameter: text, a string containing the text to analyze. 
+The function will return the number of times the first letter appears in the text (int). 
+&quot;&quot;&quot;</span>
+<span class="s3">def </span><span class="s1">count_first_letter</span><span class="s4">(</span><span class="s1">text</span><span class="s4">: </span><span class="s1">str</span><span class="s4">) </span><span class="s1">-&gt; int</span><span class="s4">:</span>
+    <span class="s3">if not </span><span class="s1">text</span><span class="s4">:</span>
+        <span class="s3">return </span><span class="s6">0</span>
+    <span class="s1">first_letter </span><span class="s4">= </span><span class="s1">text</span><span class="s4">[</span><span class="s6">0</span><span class="s4">].</span><span class="s1">lower</span><span class="s4">()</span>
+    <span class="s1">count </span><span class="s4">= </span><span class="s1">text</span><span class="s4">.</span><span class="s1">lower</span><span class="s4">().</span><span class="s1">count</span><span class="s4">(</span><span class="s1">first_letter</span><span class="s4">)</span>
+    <span class="s3">return </span><span class="s1">count</span>
+<span class="s0"># Example usage</span>
+<span class="s1">result </span><span class="s4">= </span><span class="s1">count_first_letter</span><span class="s4">(</span><span class="s5">'Asmamaw'</span><span class="s4">)</span>
+<span class="s1">print</span><span class="s4">(</span><span class="s1">result</span><span class="s4">)</span>
+<span class="s0">#########################################  Qestion 5 ###################################################################</span>
+<span class="s5">&quot;&quot;&quot; 
+After moving from Europe to the US, Jane found herself constantly struggling with date formats. She decided to write a simple program to automatically reformat her calendar's American-formatted dates into the more familiar European style. 
+Write a function called reformat_date. The function will expect one parameter: date, a string in the format MM-DD-YYYY. 
+The function will return the same date as a string in the format of DD/MM/YYYY. 
+&quot;&quot;&quot;</span>
+<span class="s3">def </span><span class="s1">reformat_date</span><span class="s4">(</span><span class="s1">birth_date</span><span class="s4">):</span>
+    <span class="s0"># Split the input date by &quot;/&quot;</span>
+    <span class="s1">date_parts </span><span class="s4">= </span><span class="s1">birth_date</span><span class="s4">.</span><span class="s1">split</span><span class="s4">(</span><span class="s5">&quot;-&quot;</span><span class="s4">)</span>
+    <span class="s3">if </span><span class="s1">len</span><span class="s4">(</span><span class="s1">date_parts</span><span class="s4">) != </span><span class="s6">3</span><span class="s4">:</span>
+        <span class="s3">return </span><span class="s5">&quot;Invalid date format. Please enter the date in dd/mm/yyyy format.&quot;</span>
+    <span class="s1">day</span><span class="s4">, </span><span class="s1">month</span><span class="s4">, </span><span class="s1">year </span><span class="s4">= </span><span class="s1">date_parts</span>
+
+    <span class="s0"># Return the reformatted date as &quot;yyyy-mm-dd&quot;</span>
+    <span class="s1">reformatted_date </span><span class="s4">= </span><span class="s5">f&quot;</span><span class="s3">{</span><span class="s1">month</span><span class="s3">}</span><span class="s5">-</span><span class="s3">{</span><span class="s1">day</span><span class="s3">}</span><span class="s5">-</span><span class="s3">{</span><span class="s1">year</span><span class="s3">}</span><span class="s5">&quot; </span><span class="s3">and </span><span class="s5">f&quot;</span><span class="s3">{</span><span class="s1">month</span><span class="s3">}</span><span class="s5">/</span><span class="s3">{</span><span class="s1">day</span><span class="s3">}</span><span class="s5">/</span><span class="s3">{</span><span class="s1">year</span><span class="s3">}</span><span class="s5">&quot;</span>
+    <span class="s3">return </span><span class="s1">reformatted_date</span>
+
+<span class="s1">result </span><span class="s4">= </span><span class="s1">reformat_date</span><span class="s4">(</span><span class="s5">&quot;02-06-2024&quot;</span><span class="s4">)</span>
+<span class="s1">print</span><span class="s4">(</span><span class="s1">result</span><span class="s4">)</span>
+<span class="s0">#########################################  Qestion 6 ###################################################################</span>
+
+<span class="s5">&quot;&quot;&quot; 
+Exercise 6 - Generate Case Variants 
+A digital advertising platform needs to create variations of headlines in both uppercase and lowercase. 
+Write a function called generate_case_variants, that will expect one parameter: text, a string that needs to be converted. 
+The function will return a list containing the lowercase and then the uppercase version of the text. 
+&quot;&quot;&quot;</span>
+<span class="s3">def </span><span class="s1">generate_case_variants</span><span class="s4">(</span><span class="s1">text</span><span class="s4">):</span>
+    <span class="s1">text </span><span class="s4">= </span><span class="s1">text</span><span class="s4">.</span><span class="s1">lower</span><span class="s4">()</span>
+    <span class="s1">text_upper</span><span class="s4">=</span><span class="s1">text</span><span class="s4">.</span><span class="s1">upper</span><span class="s4">()</span>
+    <span class="s1">concatinet_text </span><span class="s4">=  [</span><span class="s1">text </span><span class="s4">,  </span><span class="s1">text_upper</span><span class="s4">]</span>
+    <span class="s3">return </span><span class="s1">concatinet_text</span>
+<span class="s1">result</span><span class="s4">=</span><span class="s1">generate_case_variants</span><span class="s4">((</span><span class="s5">&quot;Asmamaw Chanie&quot;</span><span class="s4">) )</span>
+<span class="s1">print</span><span class="s4">(</span><span class="s1">result</span><span class="s4">)</span>
+<span class="s0">#########################################  Qestion 7 ###################################################################</span>
+<span class="s5">&quot;&quot;&quot; 
+Exercise 7 - Summer Discount 
+A supermarket has started to offer a special summer discount. To qualify for this discount, a shopping list must contain at least 5 items, and one of them must be “Ice Cream”. 
+Write a function called validate_discount that will expect one parameter: a list of strings products. 
+If the shopping list qualifies for the discount, return &quot;YES&quot;; otherwise, return &quot;NO&quot;. 
+&quot;&quot;&quot;</span>
+<span class="s3">def </span><span class="s1">validate_discount</span><span class="s4">(</span><span class="s1">products</span><span class="s4">) </span><span class="s1">-&gt; str</span><span class="s4">:</span>
+    <span class="s3">if </span><span class="s1">len</span><span class="s4">(</span><span class="s1">products</span><span class="s4">) &gt;= </span><span class="s6">5 </span><span class="s3">and </span><span class="s5">&quot;Ice Cream&quot; </span><span class="s3">in </span><span class="s1">products</span><span class="s4">:</span>
+        <span class="s3">return </span><span class="s5">&quot;YES&quot;</span>
+    <span class="s3">else</span><span class="s4">:</span>
+        <span class="s3">return </span><span class="s5">&quot;NO&quot;</span>
+<span class="s0"># Test the function</span>
+<span class="s1">result </span><span class="s4">= </span><span class="s1">validate_discount</span><span class="s4">([</span><span class="s5">&quot;Ice Cream&quot;</span><span class="s4">, </span><span class="s5">&quot;Banana&quot;</span><span class="s4">])</span>
+<span class="s1">print</span><span class="s4">(</span><span class="s1">result</span><span class="s4">)  </span><span class="s0"># Should print &quot;Yes&quot;</span>
+
+<span class="s0">#########################################  Qestion 8 ###################################################################</span>
+<span class="s5">&quot;&quot;&quot; 
+Exercise 8 - Pass or Fail 
+As part of a university course, students were required to take two exams.  
+To successfully complete the course, students needed to fulfill two conditions:  
+Their average grade must be 75 or higher 
+They must not receive a failing grade (55 or lower) on either exam. 
+Write a function called has_passed.  
+The function will expect two parameters called grade1 and grade2 (ints). 
+The function will return a string “PASS” or “FAIL” according to the above conditions. 
+&quot;&quot;&quot;</span>
+<span class="s3">def </span><span class="s1">has_passed</span><span class="s4">(</span><span class="s1">grade_1</span><span class="s4">: </span><span class="s1">int</span><span class="s4">, </span><span class="s1">grade_2</span><span class="s4">: </span><span class="s1">int</span><span class="s4">) </span><span class="s1">-&gt; str</span><span class="s4">:</span>
+    <span class="s3">if </span><span class="s4">(</span><span class="s1">grade_1 </span><span class="s4">+ </span><span class="s1">grade_2</span><span class="s4">) / </span><span class="s6">2 </span><span class="s4">&gt;= </span><span class="s6">75 </span><span class="s3">and </span><span class="s1">grade_1 </span><span class="s4">&gt;= </span><span class="s6">55 </span><span class="s3">and </span><span class="s1">grade_2 </span><span class="s4">&gt;= </span><span class="s6">55</span><span class="s4">:</span>
+        <span class="s3">return </span><span class="s5">&quot;PASS&quot;</span>
+    <span class="s3">else</span><span class="s4">:</span>
+        <span class="s3">return </span><span class="s5">&quot;FAIL&quot;</span>
+<span class="s1">result </span><span class="s4">= </span><span class="s1">has_passed</span><span class="s4">(</span><span class="s6">100</span><span class="s4">, </span><span class="s6">45</span><span class="s4">)</span>
+<span class="s1">print</span><span class="s4">(</span><span class="s1">result</span><span class="s4">)</span>
+<span class="s0">#########################################  Qestion 9 ###################################################################</span>
+<span class="s5">&quot;&quot;&quot; 
+Exercise 9 - Sentence, Period. 
+The editor of a local newspaper has a recurring problem - the reporters hand in articles and forget to add a period at the end of the sentences. 
+Write a function called period_adder.  The function will expect one parameter called sentence which holds a single sentence (str). 
+The function will return the sentence (str) with a single period at the end, regardless of whether there was a period there in the first place. 
+The only exception is sentences that end with a “!”, in which case there is no need to add a period. 
+&quot;&quot;&quot;</span>
+<span class="s3">def </span><span class="s1">period_adder</span><span class="s4">(</span><span class="s1">sentence</span><span class="s4">: </span><span class="s1">str</span><span class="s4">) </span><span class="s1">-&gt; str</span><span class="s4">:</span>
+    <span class="s3">if </span><span class="s1">sentence</span><span class="s4">.</span><span class="s1">endswith</span><span class="s4">(</span><span class="s5">&quot;!&quot;</span><span class="s4">):</span>
+        <span class="s3">return </span><span class="s1">sentence</span>
+    <span class="s3">else</span><span class="s4">:</span>
+        <span class="s3">return </span><span class="s1">sentence </span><span class="s4">+ </span><span class="s5">&quot;.&quot;</span>
+<span class="s1">result </span><span class="s4">= </span><span class="s1">period_adder</span><span class="s4">(</span><span class="s5">&quot;What a lovely day!&quot;</span><span class="s4">)</span>
+<span class="s1">print</span><span class="s4">(</span><span class="s1">result</span><span class="s4">)</span>
+<span class="s0">#########################################  Qestion 10###################################################################</span>
+<span class="s5">&quot;&quot;&quot; 
+Exercise 10 - Currency Converter Pro 
+Let’s create a currency converter that can handle two directions of conversion: EUR (€) to USD ($) and vice versa. 
+Write a function called convert that will receive a string like &quot;$120&quot; or &quot;€50”, perform the conversion, and return it as a string with the other currency symbol. 
+Use the following conversion rates: 
+1 EUR = 1.10 USD 
+You may assume that the input to the convert function will be a whole number. 
+The returned price string should be up to 2 digits, you can do that using 
+      round(float_number, 2) 
+&quot;&quot;&quot;</span>
+<span class="s3">def </span><span class="s1">convert</span><span class="s4">(</span><span class="s1">amount</span><span class="s4">) </span><span class="s1">-&gt; str</span><span class="s4">:</span>
+    <span class="s3">if </span><span class="s1">amount</span><span class="s4">.</span><span class="s1">startswith</span><span class="s4">(</span><span class="s5">&quot;€&quot;</span><span class="s4">):</span>
+        <span class="s1">converted_amount </span><span class="s4">= </span><span class="s1">float</span><span class="s4">(</span><span class="s1">amount</span><span class="s4">[</span><span class="s6">1</span><span class="s4">:]) * </span><span class="s6">1.10</span>
+        <span class="s3">return </span><span class="s5">f&quot;$</span><span class="s3">{</span><span class="s1">round</span><span class="s4">(</span><span class="s1">converted_amount</span><span class="s4">, </span><span class="s6">2</span><span class="s4">)</span><span class="s3">}</span><span class="s5">&quot;</span>
+    <span class="s3">elif </span><span class="s1">amount</span><span class="s4">.</span><span class="s1">startswith</span><span class="s4">(</span><span class="s5">&quot;$&quot;</span><span class="s4">):</span>
+        <span class="s1">converted_amount </span><span class="s4">= </span><span class="s1">float</span><span class="s4">(</span><span class="s1">amount</span><span class="s4">[</span><span class="s6">1</span><span class="s4">:]) / </span><span class="s6">1.10</span>
+        <span class="s3">return </span><span class="s5">f&quot;€</span><span class="s3">{</span><span class="s1">round</span><span class="s4">(</span><span class="s1">converted_amount</span><span class="s4">, </span><span class="s6">2</span><span class="s4">)</span><span class="s3">}</span><span class="s5">&quot;</span>
+    <span class="s3">else</span><span class="s4">:</span>
+        <span class="s3">return </span><span class="s5">&quot;Invalid input&quot;</span>
+<span class="s1">result1 </span><span class="s4">= </span><span class="s1">convert</span><span class="s4">(</span><span class="s5">&quot;$110&quot;</span><span class="s4">)</span>
+<span class="s1">print</span><span class="s4">(</span><span class="s1">result1</span><span class="s4">)  </span><span class="s0"># Should print the converted amount in EUR</span>
+<span class="s1">result2 </span><span class="s4">= </span><span class="s1">convert</span><span class="s4">(</span><span class="s5">&quot;€50&quot;</span><span class="s4">)</span>
+<span class="s1">print</span><span class="s4">(</span><span class="s1">result2</span><span class="s4">)  </span><span class="s0"># Should print the converted amount in USD</span>
+
+<span class="s0">#########################################  Qestion 11 ###################################################################</span>
+<span class="s5">&quot;&quot;&quot; 
+ Exercise 11 - Leap year 
+A leap year is a special year that contains an additional day. It’s used to keep our calendar in alignment with the Earth's revolutions around the Sun. It takes the Earth about 365.24 days to complete one full orbit around the Sun. As a result, if we didn't add a leap day approximately every 4 years, our calendar would slowly drift out of sync with the Earth's revolutions. 
+Determining which years are leap years involves a few rules: 
+The year must be evenly divisible by 4. 
+Unless it’s also a century year (like 1900, 2000, etc.), and then it must also be divisible by 400 to be considered a leap year. 
+Write a function is_leap that takes a year as input (int) and checks whether it's a leap year or not.  
+If it is a leap year, return &quot;Leap year&quot; (str). If it's not a leap year, return &quot;Not a leap year&quot; (str).  
+&quot;&quot;&quot;</span>
+<span class="s3">def </span><span class="s1">is_leap</span><span class="s4">(</span><span class="s1">year</span><span class="s4">):</span>
+    <span class="s3">if </span><span class="s4">(</span><span class="s1">year </span><span class="s4">% </span><span class="s6">4 </span><span class="s4">== </span><span class="s6">0 </span><span class="s3">and </span><span class="s1">year </span><span class="s4">% </span><span class="s6">100 </span><span class="s4">!= </span><span class="s6">0</span><span class="s4">) </span><span class="s3">or </span><span class="s1">year </span><span class="s4">% </span><span class="s6">400 </span><span class="s4">== </span><span class="s6">0</span><span class="s4">:</span>
+        <span class="s3">return </span><span class="s5">&quot;Leap year&quot;</span>
+    <span class="s3">else</span><span class="s4">:</span>
+        <span class="s3">return </span><span class="s5">&quot;Not a leap year&quot;</span>
+<span class="s1">result1 </span><span class="s4">= </span><span class="s1">is_leap</span><span class="s4">(</span><span class="s6">2020</span><span class="s4">)</span>
+<span class="s1">result2 </span><span class="s4">= </span><span class="s1">is_leap</span><span class="s4">(</span><span class="s6">2021</span><span class="s4">)</span>
+<span class="s1">print</span><span class="s4">(</span><span class="s1">result1</span><span class="s4">)  </span><span class="s0"># Should print True</span>
+<span class="s1">print</span><span class="s4">(</span><span class="s1">result2</span><span class="s4">)  </span><span class="s0"># Should print False</span>
+<span class="s0">######################## Congratulations!! You passed the exam spring Assement Score 110/100!!!########################</span></pre>
+</body>
+</html>

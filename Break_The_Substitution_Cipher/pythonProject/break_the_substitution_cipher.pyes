@@ -1,0 +1,29 @@
+import string
+import random
+
+BOOK_FILE_NAME = "encrypted_book.txt"
+print(BOOK_FILE_NAME)
+
+def get_book_content(file_path):
+    with open(file_path, "r") as handle:
+        return handle.read()
+
+def decrypt(encrypted_message, key):
+    decrypted = ""
+    for char in encrypted_message:
+        if char.isalpha():
+            if char.islower():
+                decrypted += chr((ord(char) - ord('a') - key) % 26 + ord('a'))
+            else:
+                decrypted += chr((ord(char) - ord('A') - key) % 26 + ord('A'))
+        else:
+            decrypted += char
+    return decrypted
+
+def main():
+  encrypted_book = get_book_content(BOOK_FILE_NAME)
+  print(encrypted_book[:500])
+
+
+if __name__ == "__main__":
+  main()

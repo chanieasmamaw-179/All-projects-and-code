@@ -1,0 +1,62 @@
+movies = {
+    "the shawshank redemption": {
+        "title": "The Shawshank Redemption",
+        "rating": 9.3,
+        "genre": "Drama",
+        "year": 1994  # Added year
+    },
+    "pulp fiction": {
+        "title": "Pulp Fiction",
+        "rating": 8.9,
+        "genre": "Crime",
+        "year": 1994  # Added year
+    },
+    "the godfather": {
+        "title": "The Godfather",
+        "rating": 9.2,
+        "genre": "Crime",
+        "year": 1972  # Added year
+    },
+    "the dark knight": {
+        "title": "The Dark Knight",
+        "rating": 9.0,
+        "genre": "Action",
+        "year": 2008  # Added year
+    },
+    "forrest gump": {
+        "title": "Forrest Gump",
+        "rating": 8.8,
+        "genre": "Drama",
+        "year": 1994  # Added year
+    },
+    "inception": {
+        "title": "Inception",
+        "rating": 8.8,
+        "genre": "Sci-Fi",
+        "year": 2010  # Added year
+    },
+    "fight club": {
+        "title": "Fight Club",
+        "rating": 8.8,
+        "genre": "Drama",
+        "year": 1999  # Added year
+    },
+    "the matrix": {
+        "title": "The Matrix",
+        "rating": 8.7,
+        "genre": "Sci-Fi",
+        "year": 1999  # Added year
+    },
+    "goodfellas": {
+        "title": "Goodfellas",
+        "rating": 8.7,
+        "genre": "Crime",
+        "year": 1990  # Added year
+    },
+    "interstellar": {
+        "title": "Interstellar",
+        "rating": 8.6,
+        "genre": "Sci-Fi",
+        "year": 2014  # Added year
+    }
+}
