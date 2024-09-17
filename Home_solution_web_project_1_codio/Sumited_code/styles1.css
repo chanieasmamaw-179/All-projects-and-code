@@ -1,0 +1,118 @@
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    flex-direction: column; /* Stack the header and container vertically */
+    background-color: #f0f0f0; /* Optional: background color for the entire page */
+}
+
+#house {
+    background-color:#004C6D;
+    height: 35vh;
+    width: 40%;
+}
+.header-container {
+    width: 100%;
+    max-width: 700px;
+    margin-bottom: -20px; /* Move closer to the container */
+}
+#Register_1{color: #0081b9
+}
+
+
+h1 {
+    color: black;
+    text-align: left;
+    font-size: 2rem;
+    margin-left: 0px; /* Align with container content */
+}
+
+.container {
+    display: flex;
+    align-items: flex-start; /* Align items to the top */
+    background-color: #3bb2dc;
+    width: 100%;
+    max-width: 700px;
+    padding: 40px;
+    border-radius: 10px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+    box-sizing: border-box;
+}
+
+.text-and-form {
+    margin-left: 30px; /* Space between icon and text */
+    display: flex;
+    flex-direction: column;
+}
+
+.login-form {
+    background-color: #ffffff;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+    width: 100%;
+}
+
+#Login {
+    text-align: center;
+    margin-bottom: 20px;
+    color: #333;
+    font-size: 1.5rem;
+}
+
+#table {
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    border-collapse: collapse;
+}
+
+.input2 {
+    padding: 10px;
+    text-align: center;
+}
+
+input[type="text"],
+input[type="password"] {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    box-sizing: border-box;
+    font-size: 16px;
+    background-color: #f9f9f9;
+    transition: border-color 0.3s ease;
+}
+
+input[type="text"]:focus,
+input[type="password"]:focus {
+    border-color: #4a90e2;
+    background-color: #fff;
+}
+
+#login-botm {
+    width: 100%;
+    padding: 10px;
+    background-color: #004C6D;
+    color: cornsilk;
+    text-align: center;
+    border: none;
+    border-radius: 4px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+#login-botm:hover {
+    background-color: rgba(255, 255, 255, 0.55);
+    color: #052953;
+}
+
+/* Styles for the element with ID 'Register' */
+#Register1 {
+    color: #419bc6; /* Changes text color to highlightblue when hovered */
+}
+
